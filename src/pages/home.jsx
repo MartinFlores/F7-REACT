@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import * as HI from '@hugeicons/core-free-icons';
 import {
   Page,
   Navbar,
@@ -48,22 +50,23 @@ export default ({ f7router }) => {
         $linkEl.addClass('item-selected');
       });
     }
-  }, []);
+  }, [f7router]);
 
   return (
     <Page className="page-home" onPageAfterIn={onPageAfterIn}>
       <Navbar large transparent sliding={false}>
         <NavLeft>
-          <Link panelOpen="left" iconIos="f7:menu" iconAurora="f7:menu" iconMd="material:menu" />
+          <Link panelOpen="left">
+            <HugeiconsIcon icon={HI.Menu01Icon} size={32} primaryColor="#007aff" />
+          </Link>
         </NavLeft>
         <NavTitle sliding>Framework7 React</NavTitle>
         <NavRight>
           <Link
             searchbarEnable=".searchbar-components"
-            iconIos="f7:search"
-            iconAurora="f7:search"
-            iconMd="material:search"
-          />
+          >
+            <HugeiconsIcon icon={HI.Search01Icon} size={32} primaryColor="#007aff" />
+          </Link>
         </NavRight>
         <NavTitleLarge>Framework7 React</NavTitleLarge>
         <Searchbar
@@ -86,6 +89,9 @@ export default ({ f7router }) => {
       </BlockTitle>
       <List className="components-list searchbar-found">
         <ListItem reloadDetail link="/accordion/" title="Accordion">
+          <Icon slot="media" icon="icon-f7" />
+        </ListItem>
+        <ListItem reloadDetail link="/test/" title="Vista de Prueba">
           <Icon slot="media" icon="icon-f7" />
         </ListItem>
         <ListItem reloadDetail link="/action-sheet/" title="Action Sheet">

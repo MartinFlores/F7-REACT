@@ -23,10 +23,7 @@ export default () => {
       <Panel left cover resizable>
         <View url="/panel-left/" linksView=".view-main" />
       </Panel>
-      <Panel right reveal resizable>
-        <View url="/panel-right/" />
-      </Panel>
-      <View url="/" main className="safe-areas" masterDetailBreakpoint={768} />
+      <View url="/" main className="safe-areas" browserHistory={true} masterDetailBreakpoint={768} />
     </App>
   );
 };

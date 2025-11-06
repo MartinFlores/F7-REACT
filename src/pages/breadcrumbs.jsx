@@ -1,4 +1,6 @@
 import React from 'react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import * as HI from '@hugeicons/core-free-icons';
 import {
   Navbar,
   Page,
@@ -92,33 +94,33 @@ export default () => {
         <Breadcrumbs>
           <BreadcrumbsItem>
             <Link
-              iconIos="f7:house_fill"
-              iconAurora="f7:house_fill"
-              iconMd="material:home"
               text="Home"
-            />
+            >
+              <HugeiconsIcon icon={HI.Home09Icon} size={32} primaryColor="#737361" />
+            </Link>
           </BreadcrumbsItem>
           <BreadcrumbsSeparator />
           <BreadcrumbsItem>
             <Link
-              iconIos="f7:square_list_fill"
-              iconAurora="f7:square_list_fill"
-              iconMd="material:list_alt"
               text="Catalog"
-            />
+            >
+              <HugeiconsIcon icon={HI.CatalogueIcon} size={32} primaryColor="#737361" />
+            </Link>
           </BreadcrumbsItem>
           <BreadcrumbsSeparator />
           <BreadcrumbsItem>
             <Link
-              iconIos="f7:device_phone_portrait"
-              iconAurora="f7:device_phone_portrait"
-              iconMd="material:smartphone"
               text="Phones"
-            />
+            >
+              <HugeiconsIcon icon={HI.SmartPhone01Icon} size={32} primaryColor="#737361" />
+            </Link>
           </BreadcrumbsItem>
           <BreadcrumbsSeparator />
           <BreadcrumbsItem>
-            <Link iconF7="logo_apple" text="Apple" />
+            <Link text="Apple"
+            >
+              <HugeiconsIcon icon={HI.AppleIcon} size={32} primaryColor="#737361" />
+            </Link>
           </BreadcrumbsItem>
           <BreadcrumbsSeparator />
           <BreadcrumbsItem active>iPhone 12</BreadcrumbsItem>

@@ -87,6 +87,7 @@ import TabsAnimated from "./pages/tabs-animated.jsx";
 import TabsSwipeable from "./pages/tabs-swipeable.jsx";
 import TabsRoutable from "./pages/tabs-routable.jsx";
 import TextEditor from "./pages/text-editor.jsx";
+import TestPage from "./pages/test.jsx";
 import Toast from "./pages/toast.jsx";
 import Toggle from "./pages/toggle.jsx";
 import ToolbarTabbar from "./pages/toolbar-tabbar.jsx";
@@ -123,7 +124,6 @@ export default [
   {
     path: "/",
     component: Home,
-    master: true,
   },
   // About page
   {
@@ -513,6 +513,10 @@ export default [
   {
     path: "/tabs/",
     component: Tabs,
+  },
+  {
+    path: "/test/",
+    component: TestPage,
   },
   {
     path: "/tabs-static/",
