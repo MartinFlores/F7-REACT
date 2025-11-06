@@ -18,8 +18,8 @@ Este proyecto utiliza **React**, **Vite** y **Framework7** para ofrecer una expe
 Clona el repositorio e instala las dependencias necesarias:
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
-cd <NOMBRE_DEL_PROYECTO>
+git clone https://github.com/MartinFlores/F7-REACT.git
+cd F7-REACT
 npm install
 
 npm run dev
