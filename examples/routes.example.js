@@ -116,7 +116,6 @@ import MasterDetailDetail from "./pages/master-detail-detail.jsx";
 import Store from "./pages/store.jsx";
 
 import NotFound from "./pages/404.jsx";
-import ExampleCrud from "./pages/example-crud.jsx";
 
 // Pages
 export default [
@@ -125,16 +124,6 @@ export default [
     path: "/",
     // component: PanelLeft,
     component: Home,
-    master: true,
-  },
-  {
-    path: "/",
-    // component: PanelLeft,
-    component: About,
-  },
-  {
-    path: "/example-crud/",
-    component: ExampleCrud,
     master: true,
   },
   // About page
