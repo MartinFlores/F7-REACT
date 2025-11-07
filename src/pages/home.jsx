@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import {
   Page,
   Navbar,
@@ -14,47 +14,52 @@ import {
   Icon,
   f7,
   theme,
-} from 'framework7-react';
+} from "framework7-react";
 
 export default ({ f7router }) => {
   const onResize = () => {
-    const $el = f7.$('.page-home');
+    const $el = f7.$(".page-home");
     if (f7.width >= 768) {
-      $el.find('.list:not(.searchbar-not-found)').addClass('menu-list');
+      $el.find(".list:not(.searchbar-not-found)").addClass("menu-list");
     } else {
-      $el.find('.list:not(.searchbar-not-found)').removeClass('menu-list');
+      $el.find(".list:not(.searchbar-not-found)").removeClass("menu-list");
     }
   };
 
   const onPageAfterIn = () => {
     if (!theme.aurora) return;
     if (f7.width >= 768) {
-      f7router.navigate('/about/', { reloadDetail: true });
+      f7router.navigate("/about/", { reloadDetail: true });
     }
   };
   useEffect(() => {
     if (theme.aurora) {
-      const $el = f7.$('.page-home');
+      const $el = f7.$(".page-home");
       onResize();
 
-      f7.on('resize', onResize);
+      f7.on("resize", onResize);
 
-      f7router.on('routeChange', (route) => {
+      f7router.on("routeChange", (route) => {
         const url = route.url;
         if (!$el) return;
         const $linkEl = $el.find(`a[href="${url}"]`);
         if (!$linkEl.length) return;
-        $el.find('.item-selected').removeClass('item-selected');
-        $linkEl.addClass('item-selected');
+        $el.find(".item-selected").removeClass("item-selected");
+        $linkEl.addClass("item-selected");
       });
     }
   }, []);
 
   return (
     <Page className="page-home" onPageAfterIn={onPageAfterIn}>
-      <Navbar large transparent sliding={false}>
+      <Navbar large sliding={false}>
         <NavLeft>
-          <Link panelOpen="left" iconIos="f7:menu" iconAurora="f7:menu" iconMd="material:menu" />
+          <Link
+            panelOpen="left"
+            iconIos="f7:menu"
+            iconAurora="f7:menu"
+            iconMd="material:menu"
+          />
         </NavLeft>
         <NavTitle sliding>Framework7 React</NavTitle>
         <NavRight>
@@ -115,7 +120,11 @@ export default ({ f7router }) => {
         <ListItem reloadDetail link="/cards/" title="Cards">
           <Icon slot="media" icon="icon-f7" />
         </ListItem>
-        <ListItem reloadDetail link="/cards-expandable/" title="Cards Expandable">
+        <ListItem
+          reloadDetail
+          link="/cards-expandable/"
+          title="Cards Expandable"
+        >
           <Icon slot="media" icon="icon-f7" />
         </ListItem>
         <ListItem reloadDetail link="/checkbox/" title="Checkbox">
@@ -229,13 +238,21 @@ export default ({ f7router }) => {
         <ListItem reloadDetail link="/searchbar/" title="Searchbar">
           <Icon slot="media" icon="icon-f7" />
         </ListItem>
-        <ListItem reloadDetail link="/searchbar-expandable/" title="Searchbar Expandable">
+        <ListItem
+          reloadDetail
+          link="/searchbar-expandable/"
+          title="Searchbar Expandable"
+        >
           <Icon slot="media" icon="icon-f7" />
         </ListItem>
         <ListItem reloadDetail link="/sheet-modal/" title="Sheet Modal">
           <Icon slot="media" icon="icon-f7" />
         </ListItem>
-        <ListItem reloadDetail link="/skeleton/" title="Skeleton (Ghost) Elements">
+        <ListItem
+          reloadDetail
+          link="/skeleton/"
+          title="Skeleton (Ghost) Elements"
+        >
           <Icon slot="media" icon="icon-f7" />
         </ListItem>
         <ListItem reloadDetail link="/smart-select/" title="Smart Select">
@@ -250,7 +267,11 @@ export default ({ f7router }) => {
         <ListItem reloadDetail link="/subnavbar/" title="Subnavbar">
           <Icon slot="media" icon="icon-f7" />
         </ListItem>
-        <ListItem reloadDetail link="/swipeout/" title="Swipeout (Swipe To Delete)">
+        <ListItem
+          reloadDetail
+          link="/swipeout/"
+          title="Swipeout (Swipe To Delete)"
+        >
           <Icon slot="media" icon="icon-f7" />
         </ListItem>
         <ListItem reloadDetail link="/swiper/" title="Swiper Slider">
@@ -292,22 +313,40 @@ export default ({ f7router }) => {
       </BlockTitle>
       <List className="searchbar-hide-on-search">
         <ListItem title="iOS Theme" external link="./index.html?theme=ios" />
-        <ListItem title="Material (MD) Theme" external link="./index.html?theme=md" />
-        <ListItem title="Aurora Desktop Theme" external link="./index.html?theme=aurora" />
+        <ListItem
+          title="Material (MD) Theme"
+          external
+          link="./index.html?theme=md"
+        />
+        <ListItem
+          title="Aurora Desktop Theme"
+          external
+          link="./index.html?theme=aurora"
+        />
         <ListItem title="Color Themes" reloadDetail link="/color-themes/" />
       </List>
       <BlockTitle medium className="searchbar-hide-on-search">
         Page Loaders & Router
       </BlockTitle>
       <List className="searchbar-hide-on-search">
-        <ListItem title="Page Transitions" reloadDetail link="/page-transitions/" />
-        <ListItem title="Routable Modals" reloadDetail link="/routable-modals/" />
+        <ListItem
+          title="Page Transitions"
+          reloadDetail
+          link="/page-transitions/"
+        />
+        <ListItem
+          title="Routable Modals"
+          reloadDetail
+          link="/routable-modals/"
+        />
         <ListItem
           title="Default Route (404)"
           reloadDetail
           link="/load-something-that-doesnt-exist/"
         />
-        {!theme.aurora && <ListItem title="Master-Detail (Split View)" link="/master-detail/" />}
+        {!theme.aurora && (
+          <ListItem title="Master-Detail (Split View)" link="/master-detail/" />
+        )}
         <ListItem title="Store" reloadDetail link="/store/" />
       </List>
     </Page>
