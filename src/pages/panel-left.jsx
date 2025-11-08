@@ -59,16 +59,66 @@ export default () => {
       </Block>
       <BlockTitle>Menú de Navegación</BlockTitle>
       <List>
-        <ListItem link="/example-crud/" title="CRUD EJEMPLO" panelClose />
-        <ListItem link="/accordion/" title="Accordion" panelClose />
-        <ListItem link="/action-sheet/" title="Action Sheet" panelClose />
-        <ListItem link="/badge/" title="Badge" panelClose />
-        <ListItem link="/buttons/" title="Buttons" panelClose />
-        <ListItem link="/cards/" title="Cards" panelClose />
-        <ListItem link="/checkbox/" title="Checkbox" panelClose />
-        <ListItem link="/chips/" title="Chips/Tags" panelClose />
-        <ListItem link="/contacts-list/" title="Contacts List" panelClose />
-        <ListItem link="/data-table/" title="Data Table" panelClose />
+        <ListItem
+          transition="f7-cover"
+          link="/example-crud/"
+          title="CRUD EJEMPLO"
+          panelClose
+        />
+        <ListItem
+          transition="f7-cover"
+          link="/accordion/"
+          title="Accordion"
+          panelClose
+        />
+        <ListItem
+          transition="f7-cover"
+          link="/action-sheet/"
+          title="Action Sheet"
+          panelClose
+        />
+        <ListItem
+          transition="f7-cover"
+          link="/badge/"
+          title="Badge"
+          panelClose
+        />
+        <ListItem
+          transition="f7-cover"
+          link="/buttons/"
+          title="Buttons"
+          panelClose
+        />
+        <ListItem
+          transition="f7-cover"
+          link="/cards/"
+          title="Cards"
+          panelClose
+        />
+        <ListItem
+          transition="f7-cover"
+          link="/checkbox/"
+          title="Checkbox"
+          panelClose
+        />
+        <ListItem
+          transition="f7-cover"
+          link="/chips/"
+          title="Chips/Tags"
+          panelClose
+        />
+        <ListItem
+          transition="f7-cover"
+          link="/contacts-list/"
+          title="Contacts List"
+          panelClose
+        />
+        <ListItem
+          transition="f7-cover"
+          link="/data-table/"
+          title="Data Table"
+          panelClose
+        />
       </List>
       <Block>
         <p>
